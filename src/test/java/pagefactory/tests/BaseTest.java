@@ -6,7 +6,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
-import pagefactory.pages.AppleStorePage;
+import pagefactory.pages.MacBookPage;
 import pagefactory.pages.HomePage;
 import pagefactory.pages.IphonePage;
 import pagefactory.pages.SearchResultsPage;
@@ -48,8 +48,8 @@ public class BaseTest {
         return new SearchResultsPage(getDriver());
     }
 
-    public AppleStorePage getAppleStorePage() {
-        return new AppleStorePage(getDriver());
+    public MacBookPage getAppleStorePage() {
+        return new MacBookPage(getDriver());
     }
 
     public IphonePage getIphonePage() {

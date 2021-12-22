@@ -8,8 +8,8 @@ import static org.testng.Assert.assertTrue;
 
 public class SearchTests extends BaseTest {
 
-    private String SEARCH_KEYWORD = "iPhone 11";
-    private String EXPECTED_SEARCH_QUERY = "query=iPhone";
+    private String SEARCH_KEYWORD = "MacBook";
+    private String EXPECTED_SEARCH_QUERY = "query=MacBook";
 
     @Test(priority = 1)
     public void checkThatUrlContainsSearchWord() {
@@ -30,5 +30,11 @@ public class SearchTests extends BaseTest {
         for (WebElement webElement : getSearchResultsPage().getSearchResultsList()) {
             assertTrue(webElement.getText().contains(SEARCH_KEYWORD));
         }
+    }
+
+
+    @Test(priority = 5)
+    public void checkNewYearSkidki() {
+
     }
 }
