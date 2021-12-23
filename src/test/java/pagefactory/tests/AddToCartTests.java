@@ -6,7 +6,7 @@ import static org.testng.Assert.assertEquals;
 
 public class AddToCartTests extends BaseTest {
 
-    private String EXPECTED_AMOUNT_OF_PRODUCTS_IN_CART = "1";
+    private String EXPECTED_AMOUNT_OF_PRODUCTS_IN_CART = "2";
 
 
 
@@ -14,11 +14,13 @@ public class AddToCartTests extends BaseTest {
     public void checkAddToCart() {
         getHomePage().clickOnProductCatalogButton();
         getHomePage().clickOnAppleStoreButton();
-        getAppleStorePage().clickOnIphoneButton();
-        getIphonePage().waitForPageLoadComplete(30);
-        getIphonePage().clickOnAddToCartButton();
-        getIphonePage().waitVisibilityOfElement(30, getIphonePage().getAddToCartPopup());
-        getIphonePage().clickOnContinueShoppingButton();
-        assertEquals(getHomePage().getTextOfAmountProductsInCart(), EXPECTED_AMOUNT_OF_PRODUCTS_IN_CART);
+        getMacBookPage().clickOnPanelMacBook();
+        getMacBookPage().waitForPageLoadComplete(30);
+        getMacBookPage().clickOnMacBookButton();
+        getMacBookPage().clickOnMacBookCartAdd();
+        getMacBookPage().waitVisibilityOfElement(30, getMacBookPage().getAddToCartPopup());
+        getMacBookPage().clickCountPlus();
+        getMacBookPage().clickOnContinueShoppingButton();
+        assertEquals(getMacBookPage().getTextOfAmountProductsInCart(), EXPECTED_AMOUNT_OF_PRODUCTS_IN_CART);
     }
 }

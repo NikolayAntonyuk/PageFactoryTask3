@@ -33,8 +33,9 @@ public class SearchTests extends BaseTest {
     }
 
 
-    @Test(priority = 5)
-    public void checkNewYearSkidki() {
+    @Test(priority = 4)
+    public void checkVisiblButtonMicroohine() {
+        getSearchResultsPage().displayedButtonMicrophone();
 
     }
 }

@@ -48,12 +48,10 @@ public class BaseTest {
         return new SearchResultsPage(getDriver());
     }
 
-    public MacBookPage getAppleStorePage() {
+    public MacBookPage getMacBookPage() {
         return new MacBookPage(getDriver());
     }
 
-    public IphonePage getIphonePage() {
-        return new IphonePage(getDriver());
-    }
+
 
 }
