@@ -11,6 +11,9 @@ public class SearchResultsPage extends BasePage {
     @FindBy(xpath = "//div[@class='prod-cart__descr']")
     private List<WebElement> searchResultsProductsListText;
 
+    @FindBy(xpath = "//i[@class='icon icon-microphone']")
+    private WebElement buttonMicrophone;
+
     public SearchResultsPage(WebDriver driver) {
         super(driver);
     }
@@ -22,4 +25,13 @@ public class SearchResultsPage extends BasePage {
     public List<WebElement> getSearchResultsList() {
         return searchResultsProductsListText;
     }
+
+    public void displayedButtonMicrophone(){
+        buttonMicrophone.isDisplayed();
+    }
+
+    public void clickButtonMicrophone(){
+        buttonMicrophone.click();
+    }
+
 }

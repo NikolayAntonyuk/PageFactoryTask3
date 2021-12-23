@@ -8,8 +8,8 @@ import org.testng.annotations.BeforeTest;
 
 import pagefactory.pages.MacBookPage;
 import pagefactory.pages.HomePage;
-import pagefactory.pages.IphonePage;
 import pagefactory.pages.SearchResultsPage;
+import pagefactory.pages.SignInPage;
 
 import static io.github.bonigarcia.wdm.WebDriverManager.chromedriver;
 
@@ -48,12 +48,13 @@ public class BaseTest {
         return new SearchResultsPage(getDriver());
     }
 
-    public MacBookPage getAppleStorePage() {
+    public MacBookPage getMacBookPage() {
         return new MacBookPage(getDriver());
     }
-
-    public IphonePage getIphonePage() {
-        return new IphonePage(getDriver());
+    public SignInPage getSignInPage() {
+        return new SignInPage(getDriver());
     }
+
+
 
 }

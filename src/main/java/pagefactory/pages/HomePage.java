@@ -10,6 +10,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//input[@id='input_search']")
     private WebElement searchInput;
 
+    @FindBy(xpath = "//button[@class='button-reset search-btn']")
+    private WebElement searchButton;
+
     @FindBy(xpath = "//span[@class='sidebar-item']")
     private WebElement productCatalogButton;
 
@@ -19,8 +22,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[contains(@class,'header-bottom__cart')]//div[contains(@class,'cart_count')]")
     private WebElement amountOfProductsInCart;
 
-    @FindBy(xpath = "//button[@class='button-reset search-btn']")
-    private WebElement searchButton;
+
 
 
     public HomePage(WebDriver driver) {
